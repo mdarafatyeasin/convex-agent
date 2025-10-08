@@ -10,7 +10,7 @@ export default function MathAgentUI() {
   const [loading, setLoading] = useState(false);
 
   // Convex action call
-  const askMath = useAction(api.mathActions.askMath);
+  const askMath = useAction(api.storyActions.tellStory);
 
   const handleSend = async () => {
     if (!question.trim()) return;

@@ -7,6 +7,6 @@ import { openai } from "@ai-sdk/openai";
 export const mathAgent = new Agent(components.agent, {
   name: "Math Agent",
   languageModel: openai.chat("gpt-4o-mini"),
-  instructions: "You are a helpful math solver.",
+  instructions: "You are a math solver. ONLY answer math-related questions. If the user asks for anything else, politely refuse.",
   maxSteps: 3,
 });

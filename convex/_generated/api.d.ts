@@ -10,10 +10,15 @@
 
 import type * as actions from "../actions.js";
 import type * as agents_agent from "../agents/agent.js";
+import type * as agents_routingAgent_agent from "../agents/routingAgent/agent.js";
 import type * as agents_simpleAgent_agent from "../agents/simpleAgent/agent.js";
-import type * as agents_translatorAgent from "../agents/translatorAgent.js";
+import type * as agents_storyAgent_agent from "../agents/storyAgent/agent.js";
+import type * as agents_travelAgent_agent from "../agents/travelAgent/agent.js";
 import type * as getThreadMessages from "../getThreadMessages.js";
 import type * as mathActions from "../mathActions.js";
+import type * as routingActions from "../routingActions.js";
+import type * as storyActions from "../storyActions.js";
+import type * as travelActions from "../travelActions.js";
 
 import type {
   ApiFromModules,
@@ -32,10 +37,15 @@ import type {
 declare const fullApi: ApiFromModules<{
   actions: typeof actions;
   "agents/agent": typeof agents_agent;
+  "agents/routingAgent/agent": typeof agents_routingAgent_agent;
   "agents/simpleAgent/agent": typeof agents_simpleAgent_agent;
-  "agents/translatorAgent": typeof agents_translatorAgent;
+  "agents/storyAgent/agent": typeof agents_storyAgent_agent;
+  "agents/travelAgent/agent": typeof agents_travelAgent_agent;
   getThreadMessages: typeof getThreadMessages;
   mathActions: typeof mathActions;
+  routingActions: typeof routingActions;
+  storyActions: typeof storyActions;
+  travelActions: typeof travelActions;
 }>;
 declare const fullApiWithMounts: typeof fullApi;
 
